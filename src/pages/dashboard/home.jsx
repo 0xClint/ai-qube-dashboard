@@ -76,15 +76,12 @@ export function Home() {
           >
             <div>
               <Typography variant="h6" color="blue-gray" className="mb-1">
-                Projects
+                Assets
               </Typography>
               <Typography
                 variant="small"
                 className="flex items-center gap-1 font-normal text-blue-gray-600"
-              >
-                <CheckIcon strokeWidth={3} className="h-4 w-4 text-blue-500" />
-                <strong>30 done</strong> this month
-              </Typography>
+              ></Typography>
             </div>
             <Menu placement="left-start">
               <MenuHandler>
@@ -107,7 +104,7 @@ export function Home() {
             <table className="w-full min-w-[640px] table-auto">
               <thead>
                 <tr>
-                  {["companies", "members", "budget", "completion"].map(
+                  {["asset title", "asset id", "units", "status", "action"].map(
                     (el) => (
                       <th
                         key={el}
@@ -125,8 +122,9 @@ export function Home() {
                 </tr>
               </thead>
               <tbody>
-                {projectsTableData.map(
-                  ({ img, name, members, budget, completion }, key) => {
+                {projectsTableData
+                  .slice(1, 6)
+                  .map(({ name, id, unit, completion }, key) => {
                     const className = `py-3 px-5 ${
                       key === projectsTableData.length - 1
                         ? ""
@@ -137,7 +135,6 @@ export function Home() {
                       <tr key={name}>
                         <td className={className}>
                           <div className="flex items-center gap-4">
-                            <Avatar src={img} alt={name} size="sm" />
                             <Typography
                               variant="small"
                               color="blue-gray"
@@ -148,26 +145,31 @@ export function Home() {
                           </div>
                         </td>
                         <td className={className}>
-                          {members.map(({ img, name }, key) => (
-                            <Tooltip key={name} content={name}>
-                              <Avatar
-                                src={img}
-                                alt={name}
-                                size="xs"
-                                variant="circular"
-                                className={`cursor-pointer border-2 border-white ${
-                                  key === 0 ? "" : "-ml-2.5"
-                                }`}
-                              />
-                            </Tooltip>
-                          ))}
+                          <div className="flex items-center gap-4">
+                            <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="text-xs font-medium text-blue-gray-600"
+                            >
+                              {id}
+                            </Typography>
+                          </div>
+                        </td>
+
+                        <td className={className}>
+                          <div className="flex items-center gap-4">
+                            <Typography
+                              variant="small"
+                              color="blue-gray"
+                              className="text-xs font-medium text-blue-gray-600"
+                            >
+                              {id}
+                            </Typography>
+                          </div>
                         </td>
                         <td className={className}>
-                          <Typography
-                            variant="small"
-                            className="text-xs font-medium text-blue-gray-600"
-                          >
-                            {budget}
+                          <Typography variant="small" className="font-bold">
+                            {unit}
                           </Typography>
                         </td>
                         <td className={className}>
@@ -188,8 +190,7 @@ export function Home() {
                         </td>
                       </tr>
                     );
-                  }
-                )}
+                  })}
               </tbody>
             </table>
           </CardBody>
@@ -202,7 +203,7 @@ export function Home() {
             className="m-0 p-6"
           >
             <Typography variant="h6" color="blue-gray" className="mb-2">
-              Orders Overview
+              Assets Overview
             </Typography>
             <Typography
               variant="small"

@@ -17,7 +17,7 @@ export function Tables() {
       <Card>
         <CardHeader variant="gradient" color="blue" className="mb-8 p-6">
           <Typography variant="h6" color="white">
-            Authors Table
+            Users
           </Typography>
         </CardHeader>
         <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
@@ -88,7 +88,7 @@ export function Tables() {
                           {date}
                         </Typography>
                       </td>
-                      <td className={className}>
+                      {/* <td className={className}>
                         <Typography
                           as="a"
                           href="#"
@@ -96,7 +96,7 @@ export function Tables() {
                         >
                           Edit
                         </Typography>
-                      </td>
+                      </td> */}
                     </tr>
                   );
                 }
@@ -105,7 +105,7 @@ export function Tables() {
           </table>
         </CardBody>
       </Card>
-      <Card>
+      {/* <Card>
         <CardHeader variant="gradient" color="blue" className="mb-8 p-6">
           <Typography variant="h6" color="white">
             Projects Table
@@ -213,7 +213,7 @@ export function Tables() {
             </tbody>
           </table>
         </CardBody>
-      </Card>
+      </Card> */}
     </div>
   );
 }

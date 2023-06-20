@@ -2,15 +2,18 @@ import {
   BanknotesIcon,
   UserPlusIcon,
   UserIcon,
+  Cog8ToothIcon,
   ChartBarIcon,
+  CubeTransparentIcon,
+  PresentationChartBarIcon,
 } from "@heroicons/react/24/solid";
 
 export const statisticsCardsData = [
   {
     color: "blue",
-    icon: BanknotesIcon,
-    title: "Today's Money",
-    value: "$53k",
+    icon: Cog8ToothIcon,
+    title: "Asset created ",
+    value: "1200",
     footer: {
       color: "text-green-500",
       value: "+55%",
@@ -19,9 +22,9 @@ export const statisticsCardsData = [
   },
   {
     color: "pink",
-    icon: UserIcon,
-    title: "Today's Users",
-    value: "2,300",
+    icon: CubeTransparentIcon,
+    title: "Asset in production",
+    value: "367",
     footer: {
       color: "text-green-500",
       value: "+3%",
@@ -30,9 +33,9 @@ export const statisticsCardsData = [
   },
   {
     color: "green",
-    icon: UserPlusIcon,
-    title: "New Clients",
-    value: "3,462",
+    icon: PresentationChartBarIcon,
+    title: "Inventory",
+    value: "1,156",
     footer: {
       color: "text-red-500",
       value: "-2%",
@@ -42,8 +45,8 @@ export const statisticsCardsData = [
   {
     color: "orange",
     icon: ChartBarIcon,
-    title: "Sales",
-    value: "$103,430",
+    title: "Asset shipped",
+    value: "1405",
     footer: {
       color: "text-green-500",
       value: "+5%",
