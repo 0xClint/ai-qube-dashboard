@@ -74,7 +74,9 @@ export function SignIn() {
             <Input type="email" label="Email" size="lg" />
             <Input type="password" label="Password" size="lg" />
             <Button variant="outlined" onClick={requestAccount}>
-              Connect Metamask
+              {walletAddress
+                ? `${walletAddress.slice(0, 5)}...${walletAddress.slice(5, 10)}`
+                : "Connect Metamask"}
             </Button>
             <div className="-ml-2.5">
               <Checkbox label="Remember Me" />
@@ -82,9 +84,7 @@ export function SignIn() {
           </CardBody>
           <CardFooter className="pt-0">
             <Button variant="gradient" fullWidth>
-              {walletAddress
-                ? `${walletAddress.slice(0, 5)}...${walletAddress.slice(5, 10)}`
-                : "Sign In"}
+              Sign In
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
               Don't have an account?
