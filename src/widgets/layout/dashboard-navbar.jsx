@@ -19,6 +19,7 @@ import {
   ClockIcon,
   CreditCardIcon,
   Bars3Icon,
+  PlusCircleIcon,
 } from "@heroicons/react/24/solid";
 import {
   useMaterialTailwindController,
@@ -127,7 +128,7 @@ export function DashboardNavbar() {
                     color="blue-gray"
                     className="mb-1 font-normal"
                   >
-                    <strong>New message</strong> from Laur
+                    <strong>New Asset created</strong> from John
                   </Typography>
                   <Typography
                     variant="small"
@@ -138,20 +139,21 @@ export function DashboardNavbar() {
                   </Typography>
                 </div>
               </MenuItem>
-              <MenuItem className="flex items-center gap-4">
-                <Avatar
+              <MenuItem className="flex items-center gap-2">
+                {/* <Avatar
                   src="https://demos.creative-tim.com/material-dashboard/assets/img/small-logos/logo-spotify.svg"
                   alt="item-1"
                   size="sm"
                   variant="circular"
-                />
+                /> */}
+                <PlusCircleIcon className="h-11 w-11" />
                 <div>
                   <Typography
                     variant="small"
                     color="blue-gray"
                     className="mb-1 font-normal"
                   >
-                    <strong>New album</strong> by Travis Scott
+                    <strong>Shipped</strong> #1832412
                   </Typography>
                   <Typography
                     variant="small"
@@ -172,7 +174,7 @@ export function DashboardNavbar() {
                     color="blue-gray"
                     className="mb-1 font-normal"
                   >
-                    Payment successfully completed
+                    <strong>Production</strong> #4395133
                   </Typography>
                   <Typography
                     variant="small"

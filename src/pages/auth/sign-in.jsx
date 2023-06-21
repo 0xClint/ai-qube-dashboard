@@ -75,7 +75,9 @@ export function SignIn() {
             <Input type="password" label="Password" size="lg" />
             <Button variant="outlined" onClick={requestAccount}>
               {walletAddress
-                ? `${walletAddress.slice(0, 5)}...${walletAddress.slice(5, 10)}`
+                ? `${walletAddress.slice(0, 7)}.....${walletAddress.slice(
+                    walletAddress.length - 7
+                  )}`
                 : "Connect Metamask"}
             </Button>
             <div className="-ml-2.5">

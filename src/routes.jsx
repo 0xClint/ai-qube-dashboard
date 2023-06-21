@@ -2,18 +2,11 @@ import {
   HomeIcon,
   UserCircleIcon,
   TableCellsIcon,
-  BellIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
   CubeTransparentIcon,
 } from "@heroicons/react/24/solid";
-import {
-  Home,
-  Profile,
-  Tables,
-  Notifications,
-  Ledger,
-} from "@/pages/dashboard";
+import { Home, Tables, Ledger, Asset } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
 const icon = {
@@ -34,7 +27,7 @@ export const routes = [
         icon: <CubeTransparentIcon {...icon} />,
         name: "assets",
         path: "/assets",
-        element: <Profile />,
+        element: <Asset />,
       },
       {
         icon: <TableCellsIcon {...icon} />,
