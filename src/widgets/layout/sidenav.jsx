@@ -104,7 +104,7 @@ export function Sidenav({ brandImg, brandName, routes }) {
 Sidenav.defaultProps = {
   brandImg:
     "https://upload.wikimedia.org/wikipedia/en/6/68/Defence_Research_and_Development_Organisation_Logo.png",
-  brandName: "DRDO",
+  brandName: "Indian Army",
 };
 
 Sidenav.propTypes = {
